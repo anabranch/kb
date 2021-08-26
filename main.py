@@ -54,7 +54,7 @@ EXERCISES_IN_PROGRAM = [EXERCISE_LOOKUP[x] for x in EXERCISE_NAMES_IN_PROGRAM]
 raw = p.Program(EXERCISES_IN_PROGRAM, MONTHS, DAYS_PER_WEEK)
 plan_raw = raw.get_nl_plan()
 plan = plan_raw["plan"]
-st.write(plan)
+
 motion_percentages = plan_raw["motion"]
 
 final = []
