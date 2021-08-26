@@ -46,7 +46,7 @@ one_rep_maxes = {}
 st.sidebar.subheader("One Rep Maxes [KG]")
 for name in EXERCISE_NAMES_IN_PROGRAM:
     ex = EXERCISE_LOOKUP[name]
-    ex.set_one_rep_max(st.sidebar.slider("1RM - " + name, 4, 160, step=4))
+    ex.set_one_rep_max(st.sidebar.slider("1RM - " + name, 4, 160, step=4, value=16))
     st.sidebar.write("1RM - " + name + f" Pounds ~= {int(ex.one_rep_max*2.2)}")
 
 EXERCISES_IN_PROGRAM = [EXERCISE_LOOKUP[x] for x in EXERCISE_NAMES_IN_PROGRAM]
@@ -54,6 +54,7 @@ EXERCISES_IN_PROGRAM = [EXERCISE_LOOKUP[x] for x in EXERCISE_NAMES_IN_PROGRAM]
 raw = p.Program(EXERCISES_IN_PROGRAM, MONTHS, DAYS_PER_WEEK)
 plan_raw = raw.get_nl_plan()
 plan = plan_raw["plan"]
+st.write(plan)
 motion_percentages = plan_raw["motion"]
 
 final = []

@@ -235,7 +235,7 @@ class Program:
                         for exercise in exercises:
                             target_nl = int(exercise.ideal_monthly_nl() * prcnt)
                             workout = exercise.build_workout(target_nl)
-
+                            print(workout)
                             for reps, weight in workout:
 
                                 plan.append(
