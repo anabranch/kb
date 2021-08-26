@@ -57,7 +57,7 @@ def download_button(
         <html>
         <head>
         <title>Start Auto Download file</title>
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
         $(function() {{
         $('a[data-auto-download]').each(function(){{
