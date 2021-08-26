@@ -20,7 +20,7 @@ def monthly_percentages_possible():
     return perms
 
 
-@lru_cache
+@lru_cache(maxsize=4000)
 def percentages_possible(num_values=3):
     starter = list(range(16, 92, 2))  # can tweak this number
     perms = permutations(starter, num_values)
